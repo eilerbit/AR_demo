@@ -1,15 +1,8 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using SimpleJSON;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.UI;
 
 public class DataLoader
 {
@@ -77,7 +70,7 @@ public class DataLoader
                          
             while (asyncOp.isDone == false) await Task.Delay(1000 / 30);
             
-            if(request.result != UnityWebRequest.Result.Success )
+            if(request.result != UnityWebRequest.Result.Success)
             {                
                 Debug.Log($"{request.error}, URL:{request.url}");
                                 
